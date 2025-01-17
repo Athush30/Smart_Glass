@@ -12,7 +12,7 @@ Bliss is a project aimed at creating smart glasses with advanced functionalities
 2. **Web Interface**  
    A sleek, responsive web interface for monitoring and controlling the glasses. Built with HTML, CSS, and JavaScript.
 
-##Future implementations
+## Future implementations
 1. **GPS Tracking**  
    The smart glasses include GPS functionality to track the user's location. In cases of emergencies, this data can be shared for assistance.
 
