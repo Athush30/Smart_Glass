@@ -12,8 +12,8 @@ Bliss is a project aimed at creating smart glasses with advanced functionalities
 2. **Sensing Data**
    The smart glasses collect and monitor real-time sensing data, including:
 
-   Height Data: Monitors the actual height of obstacles in the user's path.
-   Obstacle Detection: Ensures safe navigation by detecting and alerting the user about obstacles ahead.
+   - Height Data: Monitors the actual height of obstacles in the user's path.
+   - Obstacle Detection: Ensures safe navigation by detecting and alerting the user about obstacles ahead.
 
 3. **Web Interface**  
    A sleek, responsive web interface for monitoring and controlling the glasses. Built with HTML, CSS, and JavaScript.
