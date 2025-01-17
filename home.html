@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+
+
+<body>
+  
+  <header>
+    <div class="header">
+      
+      <img src="BLISS.png" height="90" opacity ="0.5">
+
+      <div class="header-right">
+        <a class="active" href="#home">Home</a>
+        <a href="#Getting started">Getting started</a>
+        <a href="#contact">Contact</a>
+        
+      </div>
+    </div>
+  </header>
+  <main>
+    
+    <div class="images"><h1>WELCOME TO OUR WEBSITE</h1></div>
+    <section id="home">
+      <h2>Welcome to My Website</h2>
+      <p>This device is designed specifically for individuals who are blind or have visual impairments, providing them with an enhanced sense of spatial awareness and safety. It enables users to navigate their surroundings confidently and avoid potential hazards.
+        Equipped with advanced sensors, the device detects obstacles in the user's path and provides real-time feedback, ensuring they can move safely without the risk of tripping or colliding with objects. By delivering clear and intuitive guidance, the device helps users understand their immediate environment, allowing them to navigate stairs, uneven surfaces, and crowded areas more easily.
+        This innovative tool empowers individuals with vision difficulties, offering them greater independence and freedom in their daily activities.</p>
+    </section>
+    <div class="split left">
+      <section id="Getting started">
+        
+        <h2>Instructions</h2>
+        <div class="shade">
+          <p>  
+            1. Prepare the Device:<br>
+              - Ensure the device is fully charged or powered, depending on its requirements.<br>
+              - Verify that all straps, pads, or attachments are clean and secure.
+              <br>
+              <br>
+            2. Position the Device:<br>
+              - Place the device's headband or strap around your forehead.<br>
+              - Adjust the strap to fit snugly but comfortably. Avoid overtightening to prevent discomfort.
+              <br>
+              <br>
+            3. Align the Device:<br>
+              - Center the main functional part (e.g., a sensor, camera, or display) over the middle of your forehead.<br>
+              - Ensure the device sits level and is not tilted to one side.
+              <br>
+              <br>
+            4. Secure the Fit:<br>
+              - Check that the device is stable and does not move when you turn your head.<br>
+              - If applicable, lock or fasten any additional buckles or straps.
+              <br>
+              <br>
+            6. Calibrate :<br>
+              - If the device requires calibration, follow the manufacturer's instructions to align it properly.<br>
+              - Confirm that the device is working correctly before proceeding.
+              <br>
+              - make the arrow in x pointed downwards toward the ground and turn on the switch until the led turns on.<br>
+              - after led turns on turn off the switch and turn make the x arrow upside down.<br>
+              - after led turns off make the device properly alligned and turn on the switch.<br>
+              - stay in a flat surface(stairs or steps or any other objects cant be i the surface that is focused by device)<br>
+              - Bend your head (at angle until led lights on).<br>
+              <br>
+            7. Use Safely:<br>
+              - Avoid sudden head movements to keep the device stable.<br>
+              - Ensure the environment is safe and clear of obstacles while using the device.
+              <br>
+              <br>
+            8. Remove the Device:<br>
+              - When finished, carefully loosen the straps and remove the device from your forehead.<br>
+              - Store the device in its designated case or area.  
+          </p>
+        </div>
+        <div class="btnn">
+          <a href="#connecting">
+            <button class="btn"><h1>connect</h1></button>
+          </a>
+        </div>
+        
+      </section>
+      <section id="connecting">
+        <h2>Connect your device</h2>
+        <div class="shade">
+          <div>
+            <p>Actual Height</p>
+            <div class="value" id="act_height">connecting....</div>
+          </div>
+          <div>
+            <p>Connection Status</p>
+            <div class="value" id="connection status">connecting....</div>
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <h2>Further developments</h2>
+        <div class="shade">
+          <p>To further enhance its functionality, we are planning to integrate a GPS tracking system that allows caregivers or family members to monitor the user's location in real-time. This ensures added safety, especially in unfamiliar environments. Additionally, an emergency call mode will be included, enabling the user to quickly alert a trusted contact or emergency services if they become lost or encounter difficulties.
+            <br>
+            <br>
+            A camera module is also in development to provide additional situational awareness. This feature will assist users in avoiding high-risk areas, such as heavy traffic zones, by analyzing the surroundings and offering guidance to safer routes.
+            <br>
+            <br>
+            By combining these features, the device aims to provide users with greater independence, safety, and confidence in their daily activities.</p>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="shade">
+          <p>Email: bliss@gamil.com<br>
+          phone: +94782913901</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 My Website. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration here (Do not use the existing configuration)
+    const firebaseConfig = {
+        apiKey: "AIzaSyAlwyZHvR3p4GYPqTJYz-eWTT09vP0ooZ8",
+        authDomain: "projectx-ebe0f.firebaseapp.com",
+        databaseURL: "https://projectx-ebe0f-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "projectx-ebe0f",
+        storageBucket: "projectx-ebe0f.firebasestorage.app",
+        messagingSenderId: "543814439424",
+        appId: "1:543814439424:web:8d146caf1400769f867ee5"
+        };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+
+    // getting reference to the database
+    var database = firebase.database();
+
+    //getting reference to the data we want
+    var dataRef2 = database.ref('act_height');
+
+    //fetch the data
+
+    dataRef2.on('value', function(getdata2){
+      let act_height = getdata2.val();
+      document.getElementById('act_height').innerHTML = act_height ;
+    })
+    if (temp == true){
+       dataRef2.on('value', function(getdata2){
+      var temp = getdata2.val();
+      document.getElementById('act_height').innerHTML = "22" ;
+    })
+    
+    }
+    var dataRef2 = database.ref('connection status');
+
+    //fetch the data
+
+    dataRef2.on('value', function(getdata2){
+      let connection_status = getdata2.val();
+      document.getElementById('connection status').innerHTML = connection_status ;
+    })
+    if (temp == true){
+       dataRef2.on('value', function(getdata2){
+      var temp = getdata2.val();
+      document.getElementById('connection status').innerHTML = "22" ;
+    })
+    
+    }
+</script>
+</body>
+</html>
 
