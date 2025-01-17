@@ -1,4 +1,4 @@
-/* Reset and global styles */
+
 body, h1, h2,  ul {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body, h1, h2,  ul {
     color: inherit;
   }
   
-  /* Header styling */
+
   header {
     background-color: white;
     color: #505868;
@@ -30,8 +30,7 @@ body, h1, h2,  ul {
     background-color: white;
     padding: 0px 0px;
   }
-  
-  /* Style the header links */
+
   .header a {
     float: left;
     color: black;
@@ -44,30 +43,28 @@ body, h1, h2,  ul {
     border-radius: 4px;
   }
   
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+ 
   .header a.logo {
     font-size: 25px;
     font-weight: bold;
   }
   
-  /* Change the background color on mouse-over */
+  
   .header a:hover {
     background-color:white;
     color: rgb(81, 155, 230);
   }
   
-  /* Style the active/current link*/
+  
   .header a.active {
     
     color: dodgerblue;
   }
   
-  /* Float the link section to the right */
   .header-right {
     float: right;
   }
   
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
   @media screen and (max-width: 500px) {
     .header a {
       float: none;
@@ -94,13 +91,12 @@ body, h1, h2,  ul {
   }
   .images{
     display:flex;
-    /* Adjust as needed */
     height: 200px;
     background: linear-gradient(
         rgba(14, 128, 250, 0.7),
-        rgba(61, 140, 223, 0.7), /* Overlay color with opacity */
+        rgba(61, 140, 223, 0.7), 
         rgba(250, 250, 250, 0.4)
-    ), url('Smart-glasses.jpg'); /* Path to your image */
+    ), url('Smart-glasses.jpg'); 
     background-size: cover;
     background-position: center;
     color: white;
@@ -232,12 +228,10 @@ button:hover {
     background-color: #4b5364;
     border-radius: 10px;
   }
-  /* Main content styling */
   main {
     background-color: rgb(240, 240, 240);
-    /*background-image: url('41b3c124-15c0-473d-bb12-a06ecd26aad0.jpg');  Replace with your image path */
-    background-size: cover; /* Scales the image to cover the entire area */
-    background-position: center; /* Centers the image to keep cropping balanced */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
     padding: 0rem;
     
@@ -245,14 +239,14 @@ button:hover {
   .shade {
     display: flex;
     flex-direction: column;
-    align-items: left; /* Align items vertically in the center */
-    justify-content: space-between; /* Add spacing between items */
-    gap: 20px; /* Optional: spacing between items */
+    align-items: left; 
+    justify-content: space-between; 
+    gap: 20px; 
   }
   
   .shade div {
     display: flex;
-    flex-direction: row; /* Stack label and value vertically */
+    flex-direction: row; 
     align-items: center;
     gap: 40px;
   }
