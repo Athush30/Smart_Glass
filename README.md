@@ -9,7 +9,13 @@ Bliss is a project aimed at creating smart glasses with advanced functionalities
    - Current height (`act_height`) of the glasses from the database.
    - Connection status of the device.
 
-2. **Web Interface**  
+2. **Sensing Data**
+   The smart glasses collect and monitor real-time sensing data, including:
+
+   Height Data: Monitors the actual height of obstacles in the user's path.
+   Obstacle Detection: Ensures safe navigation by detecting and alerting the user about obstacles ahead.
+
+3. **Web Interface**  
    A sleek, responsive web interface for monitoring and controlling the glasses. Built with HTML, CSS, and JavaScript.
 
 ## Future implementations
@@ -24,7 +30,7 @@ Bliss is a project aimed at creating smart glasses with advanced functionalities
 
 ## Technologies Used
 
-- **Hardware**: Arduino Microcontroller  
+- **Hardware**: ESP32C3  
 - **Backend**: Firebase (Realtime Database)  
 - **Frontend**:  
   - HTML5  
