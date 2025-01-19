@@ -2,11 +2,10 @@
 #include <WiFi.h>               
 #include <Firebase_ESP_Client.h>
 #include <string.h>
+#include <ESP32Servo.h>
 
-//Provide the token generation process info.
-#include "addons/TokenHelper.h"
-//Provide the RTDB payload printing info and other helper functions.
-#include "addons/RTDBHelper.h"
+#include <addons/TokenHelper.h>
+#include <addons/RTDBHelper.h>
 #include <math.h>
 #include <ezButton.h>
 
@@ -23,6 +22,8 @@
 FirebaseData fbdo;
 FirebaseAuth auth;
 FirebaseConfig config;
+
+Servo myservo;
 
 unsigned long sendDataPrevMillis = 0;
 int count = 0;
@@ -50,7 +51,6 @@ bool x= true;
 float height;
 int state ;
 ezButton toggleSwitch(6);
-
 
 const char * XMin(){
   toggleSwitch.loop();
@@ -183,6 +183,8 @@ void setup() {
         pinMode(ECHO_PIN, INPUT);
         pinMode(led,OUTPUT);
         toggleSwitch.setDebounceTime(50);
+        myservo.attach(9);
+        myservo.write(90);
 
         WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
         Serial.print("Connecting to Wi-Fi");
@@ -195,7 +197,6 @@ void setup() {
         Serial.println(WiFi.localIP());
         Serial.println();
 
-        
         config.api_key = API_KEY;
         config.database_url = DATABASE_URL;
 
@@ -237,8 +238,6 @@ void loop() {
           
           if (Firebase.RTDB.setString(&fbdo, "connection status", "success")){
             Serial.println("PASSED");
-            Serial.println("PATH: " + fbdo.dataPath());
-            Serial.println("TYPE: " + fbdo.dataType());
           }
           else {
             Serial.println("FAILED");
@@ -251,8 +250,8 @@ void loop() {
           }
           height/=20;
           if (height>act_height){
-            Serial.println("g");
             status = "down";
+            myservo.write(0);
             if (Firebase.RTDB.setString(&fbdo, "status", status)){
               Serial.println("PASSED");
             }
@@ -263,6 +262,7 @@ void loop() {
           }
           if (height<act_height){
             status="up";
+            myservo.write(180);
             if (Firebase.RTDB.setString(&fbdo, "status", status)){
               Serial.println("PASSED");
             }
@@ -271,12 +271,8 @@ void loop() {
               Serial.println("REASON: " + fbdo.errorReason());
             }
           }
-          Serial.print(height);
-          Serial.print(act_height);
-          Serial.println(status);
           
         }
         delay(100);
 
 }
-
