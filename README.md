@@ -15,6 +15,9 @@ Bliss is a project aimed at creating smart glasses with advanced functionalities
    - Height Data: Monitors the actual height of obstacles in the user's path.
    - Obstacle Detection: Ensures safe navigation by detecting and alerting the user about obstacles ahead.
 
+3. **Obstacle Detection**
+   -Range Estimation: Detects the distance to obstacles and warns the user through the servo.
+
 3. **Web Interface**  
    A sleek, responsive web interface for monitoring and controlling the glasses. Built with HTML, CSS, and JavaScript.
 
@@ -27,6 +30,10 @@ Bliss is a project aimed at creating smart glasses with advanced functionalities
 
 3. **Camera Integration**  
    A camera is integrated to provide real-time visuals, allowing users to avoid traffic and navigate efficiently.
+
+4. **Voice Assistance**
+   Integrates a text-to-speech system to provide verbal guidance, such as "Obstacle ahead, two meters away" or "Turn right to    avoid traffic."
+   Can also provide status updates like "Battery low" or "Device connected."
 
 ## Technologies Used
 
