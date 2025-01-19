@@ -121,6 +121,7 @@ const char *connect(){
       act_height+=distance()*sin(angle());
     }
     act_height/=20;
+    act_height = abs(act_height);
     Serial.println(act_height);
     Serial.println("CONNECT");
     
@@ -249,6 +250,7 @@ void loop() {
             height += distance() * sin(angle());
           }
           height/=20;
+          height = abs(height);
           if (height>act_height){
             status = "down";
             myservo.write(0);
