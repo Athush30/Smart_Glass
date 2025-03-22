@@ -1,6 +1,6 @@
-# Bliss: Smart Glasses Project
+# Smart Glasses 
 
-Bliss is a project aimed at creating smart glasses with advanced functionalities to enhance user safety and convenience. This project integrates hardware and software to provide features like GPS tracking, emergency call support, and real-time traffic updates using Firebase and Arduino.
+This project aimed at creating smart glasses with advanced functionalities to enhance user safety and convenience. This project integrates hardware and software to provide features like GPS tracking, emergency call support, and real-time traffic updates using Firebase and Arduino.
 
 ## Features
 
