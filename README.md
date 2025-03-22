@@ -48,7 +48,7 @@ This project aimed at creating smart glasses with advanced functionalities to en
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Athush30/_bliss_.git
+   git clone https://github.com/Athush30/Smart_Glass.git
    ```
 
 2. Set up the Firebase configuration in `script.js`:
@@ -72,7 +72,7 @@ This project aimed at creating smart glasses with advanced functionalities to en
 ## Project Structure
 
 ```
-_bliss_/
+Smart_Glass/
 ├── home.html       # Main HTML file for the web interface
 ├── script.js       # JavaScript file for interactivity and Firebase integration
 ├── styles.css      # Stylesheet for the web interface
